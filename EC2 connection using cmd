@@ -1,0 +1,33 @@
+Step-by-Step SOP for connecting to an AWS EC2 instance from a Windows 10 laptop using the command prompt and setting the correct permissions for your private key file:
+
+->Open the command prompt: You can do this by clicking on the Start menu, typing "cmd" in the search bar, and clicking on "Command Prompt" when it appears.
+
+->Navigate to the directory where your private key is stored: Use the "cd" command to navigate to the directory where your private key is stored. For example, if your key is stored in the "Downloads" folder, you can navigate there by typing "cd Downloads" in the command prompt.
+
+->In Windows Explorer, locate the private key file that you downloaded from AWS.
+
+->Right-click on the file and select "Properties".
+
+->Click on the "Security" tab.
+
+->Click on the "Edit" button.
+
+->Select your user account and check the "Full control" box under "Allow".
+
+->Click "OK" to close the "Permissions for your-key-pair.pem" window.
+
+->Click "OK" again to close the "Properties" window.
+
+->Change the permissions of your private key in the command prompt: Type "ssh -i your-key-pair.pem ec2-user@your-ec2-instance-public-dns" (replace "your-key-pair.pem" with the name of your key file and "your-ec2-instance-public-dns" with the public DNS of your EC2 instance). Press enter.
+
+->You may see a warning message about the authenticity of the host. Type "yes" to proceed.
+
+->You should now be connected to your EC2 instance via SSH!
+
+->Once connected, you can use command line tools to manage your EC2 instance. For example, you can install software, configure settings, and transfer files. It's important to note that once you're finished using your instance, you should stop it to avoid incurring unnecessary charges.
+
+I hope this helps! Please let me know if you have any further questions.
+
+
+
+
