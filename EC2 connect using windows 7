@@ -1,0 +1,29 @@
+Step-by-step SOP for connecting to an AWS EC2 instance from a Windows 7 laptop (or any Windows version without native SSH or CMD):
+
+-> Download and install PuTTY: You can download PuTTY from the official website: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+-> Convert your private key file to PuTTY format: Use PuTTYgen (which should be included with your PuTTY installation) to convert your private key file to a format that PuTTY can use. To do this, open PuTTYgen, click on "Load", and select your private key file. Then click on "Save private key" and save the converted key in a location you can easily access.
+
+-> Open PuTTY: Double-click on the PuTTY icon to launch the program.
+
+-> In the "Session" category, enter the public DNS of your EC2 instance in the "Host Name (or IP address)" field. Make sure that the "Port" field is set to "22".
+
+-> In the "Connection" category, expand the "SSH" sub-category and click on "Auth".
+
+-> Click on "Browse" next to "Private key file for authentication" and select the PuTTY format private key file you created in step 2.
+
+-> In the "Session" category, enter a name for this session in the "Saved Sessions" field and click on "Save".
+
+-> Click on "Open" to initiate the connection.
+
+-> You should see a warning message about the authenticity of the host. Click "Yes" to proceed.
+
+-> You should now be connected to your EC2 instance via SSH!
+
+-> Once connected, you can use command line tools to manage your EC2 instance. For example, you can install software, configure settings, and transfer files. It's important to note that once you're finished using your instance, you should stop it to avoid incurring unnecessary charges.
+
+-> I hope this helps! Please let me know if you have any further questions.
+
+
+
+
