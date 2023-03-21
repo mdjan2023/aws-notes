@@ -1,0 +1,19 @@
+An AWS key pair is a secure login credential that allows you to securely connect to an Amazon Web Services (AWS) Elastic Compute Cloud (EC2) instance or other Amazon cloud resources. The key pair consists of two parts: a public key and a private key. The public key is used by AWS to encrypt data sent to your instance, while the private key is used to decrypt the data on your instance.
+
+RSA, ED25519, PPK, and PEM are all different formats for key pairs. RSA is a widely-used algorithm for public-key cryptography, while ED25519 is a newer algorithm that offers better performance and security. PPK and PEM are file formats used to store private keys. PPK is a proprietary format used by PuTTY, while PEM is an open standard that is used by a wide range of tools.
+
+Let's dive a bit deeper into each of these key pair formats:
+
+RSA: RSA is a widely-used algorithm for public-key cryptography. It is named after its inventors, Ron Rivest, Adi Shamir, and Leonard Adleman. RSA keys are typically used in conjunction with SSH, SSL, and TLS protocols to provide secure communication over the internet. RSA keys come in different sizes, ranging from 1024 bits to 4096 bits. The larger the key size, the more secure the key is, but also the slower the encryption and decryption process.
+
+ED25519: ED25519 is a newer algorithm that offers better performance and security than RSA. It is named after its creators, Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe, and Bo-Yin Yang. ED25519 keys are shorter than RSA keys, making them faster to transmit and process. They are also less vulnerable to certain types of attacks, such as side-channel attacks.
+
+PPK: PPK is a proprietary file format used by PuTTY to store private keys. PuTTY is a popular open-source SSH and telnet client for Windows, and is commonly used to connect to AWS EC2 instances. PPK files are encrypted using a passphrase, which is required to unlock the key when it is used.
+
+PEM: PEM is an open standard file format used to store private keys. It is used by a wide range of tools and protocols, including OpenSSL, SSH, and TLS. PEM files can be password-protected, and can also be encrypted using a symmetric encryption algorithm. PEM files typically have extensions such as .pem, .key, and .cer.
+
+Now let's talk a bit more about how key pairs are used in AWS. When you create an EC2 instance, you are prompted to select a key pair to use for accessing the instance. If you already have a key pair, you can select it from the list of existing key pairs. If you don't have a key pair, you can create one using the AWS Management Console, the AWS CLI, or other tools.
+
+Once you have created a key pair, you can use it to securely connect to your EC2 instance using SSH. To do this, you need to specify the path to the private key file on your local machine, and the username for the instance (which depends on the AMI used to launch the instance). For example, if you are using the Amazon Linux AMI, the username is "ec2-user".
+
+In conclusion, AWS key pairs are a critical component of secure communication with AWS cloud resources. They allow you to securely connect to your EC2 instances using SSH, and protect your data from unauthorized access. Understanding the different key pair formats, such as RSA, ED25519, PPK, and PEM, is important when working with AWS, as each format has its own advantages and limitations.
